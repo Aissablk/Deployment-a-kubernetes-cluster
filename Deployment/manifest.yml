@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: store-prod
   namespace: default
+  labels: 
 spec:
   replicas: 4
   selector:
@@ -17,18 +18,7 @@ spec:
         - name: store-prod
           image: linuxacademycontent/store-products:1.0.0
           port: 80
---------
-apiVersion: apps/v1
-kind: Service
-metadata:
-  name: store-prod
-  namespace: default
-spec: 
-  selector:
-    bb: list-products
-  ports:
-    - protocol: TCP
-    - port: 80
+
     
 
       

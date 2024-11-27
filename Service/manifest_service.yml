@@ -1,0 +1,14 @@
+apiVersion: apps/v1 
+kind: Service
+metadata:
+  name: store-prod
+  namespace: default
+spec: 
+  selector:
+    bb: list-products
+  ports:
+    - protocol: TCP
+      port: 80
+    
+
+      

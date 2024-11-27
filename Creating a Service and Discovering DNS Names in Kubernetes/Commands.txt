@@ -1,0 +1,9 @@
+kubectl create deployment nginx --image=nginx
+kubectl get deployments
+kubectl expose deployment nginx --port 80 --type NodePort
+kubectl get services
+kubectl run qmcgaw --image=qmcgaw/dns:v1.5.1
+kubectl get Pods
+NAME                     READY   STATUS    RESTARTS   AGE
+nginx                    1/1     Running   0          16m
+nginx-77b4fdf86c-dpz7j   1/1     Running   0          12m
